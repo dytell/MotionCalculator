@@ -10,20 +10,35 @@ using Lab2Varian8;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 
+
+
 namespace Motion
 {
-    
+
     public partial class Model : Form
     {
         /// <summary>
         /// Список класса IMotion
         /// </summary>
         List<IMotion> _motions;
-        
+     
         public Model()
         {
+
             InitializeComponent();
             _motions = new List<IMotion>();
+            var x = new ControlMotion();
+            if (!userControl1.Controls.Contains(UniformlyUserControl.Instance))
+            {
+                userControl1.Controls.Add(UniformlyUserControl.Instance);
+                UniformlyUserControl.Instance.Dock = DockStyle.Fill;
+                UniformlyUserControl.Instance.BringToFront();
+
+            }
+            else
+                UniformlyUserControl.Instance.BringToFront();
+                
+
         }
 #if DEBUG
 

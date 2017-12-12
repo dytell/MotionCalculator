@@ -44,7 +44,8 @@
             this.ReplyColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NameClumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._dataGridView = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.UserElement = new System.Windows.Forms.UserControl();
+            this.userControl1 = new System.Windows.Forms.UserControl();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._dataGridView)).BeginInit();
             this.SuspendLayout();
@@ -52,7 +53,7 @@
             // _AddButton
             // 
             this._AddButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this._AddButton.Location = new System.Drawing.Point(46, 236);
+            this._AddButton.Location = new System.Drawing.Point(70, 328);
             this._AddButton.Name = "_AddButton";
             this._AddButton.Size = new System.Drawing.Size(75, 23);
             this._AddButton.TabIndex = 1;
@@ -64,7 +65,7 @@
             // _EditButton
             // 
             this._EditButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this._EditButton.Location = new System.Drawing.Point(127, 236);
+            this._EditButton.Location = new System.Drawing.Point(151, 328);
             this._EditButton.Name = "_EditButton";
             this._EditButton.Size = new System.Drawing.Size(75, 23);
             this._EditButton.TabIndex = 2;
@@ -76,7 +77,7 @@
             // _DeleteButton
             // 
             this._DeleteButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this._DeleteButton.Location = new System.Drawing.Point(208, 236);
+            this._DeleteButton.Location = new System.Drawing.Point(232, 328);
             this._DeleteButton.Name = "_DeleteButton";
             this._DeleteButton.Size = new System.Drawing.Size(75, 23);
             this._DeleteButton.TabIndex = 3;
@@ -88,7 +89,7 @@
             // _ExitButton
             // 
             this._ExitButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this._ExitButton.Location = new System.Drawing.Point(380, 236);
+            this._ExitButton.Location = new System.Drawing.Point(394, 328);
             this._ExitButton.Name = "_ExitButton";
             this._ExitButton.Size = new System.Drawing.Size(75, 23);
             this._ExitButton.TabIndex = 4;
@@ -99,7 +100,7 @@
             // _RandButton
             // 
             this._RandButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this._RandButton.Location = new System.Drawing.Point(289, 236);
+            this._RandButton.Location = new System.Drawing.Point(313, 328);
             this._RandButton.Name = "_RandButton";
             this._RandButton.Size = new System.Drawing.Size(75, 23);
             this._RandButton.TabIndex = 5;
@@ -121,7 +122,7 @@
             this.менюToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(501, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(619, 24);
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -188,23 +189,31 @@
             this._dataGridView.Location = new System.Drawing.Point(12, 27);
             this._dataGridView.Name = "_dataGridView";
             this._dataGridView.ReadOnly = true;
-            this._dataGridView.Size = new System.Drawing.Size(271, 203);
+            this._dataGridView.Size = new System.Drawing.Size(414, 295);
             this._dataGridView.TabIndex = 0;
             // 
-            // panel1
+            // UserElement
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Location = new System.Drawing.Point(289, 27);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 203);
-            this.panel1.TabIndex = 7;
+            this.UserElement.Location = new System.Drawing.Point(288, 27);
+            this.UserElement.Name = "UserElement";
+            this.UserElement.Size = new System.Drawing.Size(150, 150);
+            this.UserElement.TabIndex = 0;
+            // 
+            // userControl1
+            // 
+            this.userControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.userControl1.Enabled = false;
+            this.userControl1.Location = new System.Drawing.Point(432, 30);
+            this.userControl1.Name = "userControl1";
+            this.userControl1.Size = new System.Drawing.Size(175, 292);
+            this.userControl1.TabIndex = 0;
             // 
             // Model
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(501, 265);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(619, 357);
+            this.Controls.Add(this.userControl1);
             this.Controls.Add(this._RandButton);
             this.Controls.Add(this._ExitButton);
             this.Controls.Add(this._DeleteButton);
@@ -225,6 +234,7 @@
 
         #endregion
         private System.Windows.Forms.Button _AddButton;
+        private System.Windows.Forms.UserControl UserElement;
         private System.Windows.Forms.Button _EditButton;
         private System.Windows.Forms.Button _DeleteButton;
         private System.Windows.Forms.Button _ExitButton;
@@ -240,7 +250,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ReplyColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn NameClumn;
         private System.Windows.Forms.DataGridView _dataGridView;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.UserControl userControl1;
     }
 }
 
